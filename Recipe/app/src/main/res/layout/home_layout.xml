@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".view.HomeFragment">
+
+
+    <Button
+        android:id="@+id/btn_add"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:text="ADD" />
+
+    <Button
+        android:id="@+id/btn_edit"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:layout_toEndOf="@+id/btn_add"
+        android:visibility="invisible"
+        android:text="EDIT" />
+
+    <Button
+        android:id="@+id/btn_delete"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:layout_toEndOf="@+id/btn_edit"
+        android:visibility="invisible"
+        android:text="DELETE" />
+
+    <Button
+        android:id="@+id/btn_cancel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:layout_toEndOf="@+id/btn_delete"
+        android:text="x"/>
+
+    <TextView
+        android:id="@+id/tv_select"
+        android:layout_width="match_parent"
+        android:layout_height="30dp"
+        android:text="None Selected"
+        android:background="@color/purple_200"
+        android:layout_below="@+id/btn_add"/>
+
+
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rv_recs"
+            android:layout_width="match_parent"
+            android:layout_height="450dp"
+            android:layout_below="@+id/tv_select"
+            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+            tools:listitem="@layout/list_layout" />
+
+    <TextView
+        android:id="@+id/prompt"
+        android:layout_width="match_parent"
+        android:layout_height="30dp"
+        android:text="ENTER NEW INFO BELOW: "
+        android:layout_below="@+id/rv_recs"
+        android:visibility="gone"
+        android:textStyle="bold"/>
+
+<TextView
+    android:id="@+id/new_name"
+    android:layout_width="100dp"
+    android:layout_height="20dp"
+    android:text="Dish Name:"
+    android:layout_below="@+id/prompt"
+    android:visibility="gone"
+    android:textStyle="bold"
+    android:background="#F89"/>
+
+    <EditText
+        android:id="@+id/et_name"
+        android:layout_width="match_parent"
+        android:layout_height="20dp"
+        android:layout_below="@+id/prompt"
+        android:layout_toEndOf="@+id/new_name"
+        android:visibility="gone"
+        android:background="#F89"/>
+
+    <TextView
+        android:id="@+id/new_desc"
+        android:layout_width="100dp"
+        android:layout_height="20dp"
+        android:text="Description:"
+        android:layout_below="@+id/new_name"
+        android:visibility="gone"
+        android:textStyle="bold"
+        android:background="#F89"/>
+
+    <EditText
+        android:id="@+id/et_desc"
+        android:layout_width="match_parent"
+        android:layout_height="20dp"
+        android:layout_below="@+id/et_name"
+        android:layout_toEndOf="@+id/new_desc"
+        android:visibility="gone"
+        android:background="#F89"/>
+
+    <TextView
+        android:id="@+id/new_ing"
+        android:layout_width="100dp"
+        android:layout_height="40dp"
+        android:text="Ingredients:"
+        android:layout_below="@+id/new_desc"
+        android:visibility="gone"
+        android:textStyle="bold"
+        android:background="#F89"/>
+
+    <EditText
+        android:id="@+id/et_ing"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_below="@+id/et_desc"
+        android:layout_toEndOf="@+id/new_ing"
+        android:visibility="gone"
+        android:background="#F89"/>
+
+    <Button
+        android:id="@+id/btn_save"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textStyle="bold"
+        android:text="SAVE EDITS"
+        android:visibility="gone"
+        android:layout_below="@+id/new_ing"/>
+
+
+
+</RelativeLayout>
